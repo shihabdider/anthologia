@@ -83,7 +83,7 @@ function HomePage() {
 
 function App() {
   return (
-    <Router>
+    <Router basename='/anthologia/'>
       <Routes>
         <Route path="/" element={<HomePage />} />
         {stories.map((story) => (
