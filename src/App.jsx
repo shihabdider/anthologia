@@ -1,5 +1,5 @@
 import './App.css'
-import { useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import FuzzySearchBar from "./components/FuzzySearchBar";
 import ReactMarkdown from "react-markdown";
