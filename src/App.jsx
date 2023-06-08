@@ -85,11 +85,11 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/anthologia" element={<HomePage />} />
         {stories.map((story) => (
           <Route
             key={story.path}
-            path={`/${story.path}`}
+            path={`/anthologia/${story.path}`}
             element={<StoryPage content={story.content} tags={story.tags} />} // Pass the tags prop here
           />
         ))}
