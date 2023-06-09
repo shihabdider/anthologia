@@ -17,12 +17,25 @@ const baseRenderers = {
   blockquote: (props) => <Text type="secondary">{props.children}</Text>,
 };
 
+const preStyle = {
+  fontSize: "1.2rem",
+  fontFamily: "inherit",
+  lineHeight: "inherit",
+  margin: "0",
+};
+
 function StoryPage({ content, tags }) {
   const isPoem = tags?.includes("poem");
 
   const renderers = {
     ...baseRenderers,
-    p: isPoem ? (props) => <pre>{props.children}</pre> : (props) => <Paragraph>{props.children}</Paragraph>,
+    p: isPoem
+      ? (props) => (
+          <div className="poem-container">
+            <pre>{props.children}</pre>
+          </div>
+        )
+      : (props) => <Paragraph>{props.children}</Paragraph>,
   };
 
   return (

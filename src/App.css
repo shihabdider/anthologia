@@ -68,9 +68,11 @@
   text-indent: 1.5em;
 }
 
-.ant-typography pre {
-    background: white;
-    border: none;
+.poem-container pre {
+  font-size: 1.2rem;
+  font-family: inherit;
+  line-height: inherit;
+  margin: 0;
 }
 
 h1 {
