@@ -81,9 +81,10 @@ function HomePage() {
   );
 }
 
+const basename = import.meta.env.VITE_BASENAME;
 function App() {
   return (
-    <Router basename='/anthologia/'>
+    <Router basename={basename}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         {stories.map((story) => (
